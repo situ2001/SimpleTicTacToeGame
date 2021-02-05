@@ -42,7 +42,7 @@ public class Client extends Application implements Constants {
     private final Cell[][] cells = new Cell[3][3];
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         BorderPane connectPane = new BorderPane();
         HBox hBox = new HBox(10);
         TextField tfHost = new TextField();
@@ -118,8 +118,10 @@ public class Client extends Application implements Constants {
                 if (player == PLAYER1) {
                     myToken = 'X';
                     anotherToken = 'O';
-                    Platform.runLater(() -> gameStage.setTitle("PLAYER1 X"));
-                    Platform.runLater(() -> label.setText("Waiting for player2 to join..."));
+                    Platform.runLater(() -> {
+                        gameStage.setTitle("PLAYER1 X");
+                        label.setText("Waiting for player2 to join...");
+                    });
                     myTurn = true;
 
                     fromServer.readInt(); //wait to start
@@ -127,8 +129,10 @@ public class Client extends Application implements Constants {
                 } else if (player == PLAYER2) {
                     myToken = 'O';
                     anotherToken = 'X';
-                    Platform.runLater(() -> gameStage.setTitle("PLAYER2 O"));
-                    Platform.runLater(() -> label.setText("Game starts. Waiting for player1."));
+                    Platform.runLater(() -> {
+                        gameStage.setTitle("PLAYER2 O");
+                        label.setText("Game starts. Waiting for player1.");
+                    });
                 }
 
                 while (gameContinue) {
