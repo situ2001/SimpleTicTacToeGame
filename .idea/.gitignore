@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../../:\Users\situ\Desktop\gs-rest-service-master\SimpleTicTacToeGame\.idea/dataSources/
+/../../../../../../:\Users\situ\codes\SimpleTicTacToeGame\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

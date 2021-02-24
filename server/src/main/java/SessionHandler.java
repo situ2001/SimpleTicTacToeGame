@@ -1,5 +1,3 @@
-package server;
-
 import res.Constants;
 
 import java.io.DataInputStream;
