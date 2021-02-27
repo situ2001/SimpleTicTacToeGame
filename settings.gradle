@@ -1,4 +1,3 @@
 rootProject.name = 'SimpleTicTacToeGame'
 
-include 'server'
-include 'client'
+include 'server', 'client'
